@@ -1,0 +1,56 @@
+.Main {
+    display: block;
+    height: 100vh;
+    width: 83vw;
+    background-color: #00557c;
+}
+#title {
+    position: absolute;
+    right: 20%;
+    color: #ffffff;
+    font-size: 20pt;
+}
+.controls {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    display: inline-flex;
+    align-items: center;
+    overflow: visible;
+    width: 83vw;
+    height: 55px;
+    background-color: #868686;
+}
+.buttons {
+    display: inline-flex;
+    position: absolute;
+    right: 2%;
+}
+.button {
+    cursor: pointer;
+    display: block;
+    margin: 10px;
+    padding-top: 4px;
+    color: #ffffff;
+    font-size: 11pt;
+    background-color: #0199da;
+    width: 60px;
+    height: 30px;
+}
+.daneshkade {
+    display: inline-flex;
+    position: absolute;
+    left: 2%;
+}
+.select {
+    background-color: #ffffff;
+    margin: 17px;
+}
+.react-grid-HeaderCell,
+.react-grid-Cell {
+    box-sizing: border-box;
+}
+.react-grid-Container {
+    position: absolute;
+    top: 135px;
+}
