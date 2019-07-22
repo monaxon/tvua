@@ -1,0 +1,110 @@
+.Button-With-Title {
+  transition-duration: 0.25s;
+  border-style: none;
+  font-size: 18px;
+  margin: 25px;
+  margin-top: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.Button-With-Title:hover {
+  transition-duration: 0.25s;
+}
+.Text-Input-Container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 60%;
+  min-width: 300px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  align-items: center;
+}
+.Text-Input {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  padding-right: 50px;
+  padding-left: 10px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
+  z-index: 1;
+}
+.Text-Input-Icon-Container {
+  transition-duration: 0.25s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  z-index: 2;
+  text-align: center;
+  border-left-style: solid;
+  border-left-width: 1px;
+}
+.Error-Box {
+  transition-duration: 0.75s;
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-width: 400px;
+  color: #ffffff;
+  z-index: 100;
+}
+.Error-Text-Container {
+  width: 100%;
+  max-width: 400px;
+  min-height: 50px;
+  background-color: rgba(192, 50, 33, 0.85);
+  border-radius: 50px;
+  border-bottom-right-radius: 0px;
+  text-align: center;
+  margin: 0px;
+  padding-bottom: 10px;
+}
+.Error-Pointer {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-top: 15px solid rgba(192, 50, 33, 0.85);
+  margin-top: 0px;
+}
+.Error-Text {
+  padding-top: 15px;
+  margin-bottom: 0px;
+}
+.Links {
+  color: #5c08ff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.Links:hover {
+  color: #7143ff;
+}
+.Title-White {
+  color: #ffffff;
+  margin: 40px;
+  font-size: 28px;
+  text-shadow: 0 0 5px #3a3a3a;
+}
+.No-Select-Text {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}

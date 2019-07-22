@@ -14,3 +14,9 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+$router->get('datetime', 'Users@dateTime');
+$router->get('password/hash/{passphrase}', 'Users@hashPassword');
+$router->get('password/check/{username}/{password}', 'Users@checkPassword');
+$router->get('college/all', 'Colleges@getColleges');
+
+$router->post('login', 'Users@login');

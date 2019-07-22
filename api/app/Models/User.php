@@ -2,7 +2,7 @@
 
 /**
  * Created by Reliese Model.
- * Date: Sat, 01 Jun 2019 18:12:38 +0000.
+ * Date: Fri, 19 Jul 2019 16:20:24 +0000.
  */
 
 namespace App\Models;
@@ -24,7 +24,9 @@ use Illuminate\Database\Eloquent\Model;
  * @property \Illuminate\Database\Eloquent\Collection $absences
  * @property \Illuminate\Database\Eloquent\Collection $colleges
  * @property \Illuminate\Database\Eloquent\Collection $courses
+ * @property \Illuminate\Database\Eloquent\Collection $majors
  * @property \Illuminate\Database\Eloquent\Collection $teachers
+ * @property \Illuminate\Database\Eloquent\Collection $tokens
  * @property \Illuminate\Database\Eloquent\Collection $users
  *
  * @package App\Models
@@ -73,9 +75,19 @@ class User extends Model
 		return $this->hasMany(\App\Models\Course::class, 'creatorid');
 	}
 
+	public function majors()
+	{
+		return $this->hasMany(\App\Models\Major::class, 'creatorid');
+	}
+
 	public function teachers()
 	{
 		return $this->hasMany(\App\Models\Teacher::class, 'creatorid');
+	}
+
+	public function tokens()
+	{
+		return $this->hasMany(\App\Models\Token::class, 'userid');
 	}
 
 	public function users()

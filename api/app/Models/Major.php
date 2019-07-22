@@ -10,30 +10,33 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class Teacher
+ * Class Major
  * 
- * @property int $teacherid
- * @property string $fullname
+ * @property int $majorid
+ * @property int $level
+ * @property string $title
  * @property string $description
  * @property int $creatorid
  * 
  * @property \App\Models\User $user
- * @property \Illuminate\Database\Eloquent\Collection $absences
+ * @property \Illuminate\Database\Eloquent\Collection $courses
  *
  * @package App\Models
  */
-class Teacher extends Model
+class Major extends Model
 {
-	protected $table = 'teacher';
-	protected $primaryKey = 'teacherid';
+	protected $table = 'major';
+	protected $primaryKey = 'majorid';
 	public $timestamps = false;
 
 	protected $casts = [
+		'level' => 'int',
 		'creatorid' => 'int'
 	];
 
 	protected $fillable = [
-		'fullname',
+		'level',
+		'title',
 		'description',
 		'creatorid'
 	];
@@ -43,8 +46,8 @@ class Teacher extends Model
 		return $this->belongsTo(\App\Models\User::class, 'creatorid');
 	}
 
-	public function absences()
+	public function courses()
 	{
-		return $this->hasMany(\App\Models\Absence::class, 'teacherid');
+		return $this->hasMany(\App\Models\Course::class, 'majorid');
 	}
 }
